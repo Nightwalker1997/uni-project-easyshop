@@ -1,0 +1,27 @@
+.commodity{
+    margin-top: 32px;
+    margin-bottom: 16px;
+}
+.card-body-left{
+    direction: rtl !important;
+    text-align: justify;
+}
+
+.table{
+    direction: ltr !important;
+    text-align: left;
+    font-size: .8rem;
+}
+
+.borderTop{
+    margin: 10px 0;
+    border-top: 1px dashed #00f;
+}
+
+.table-responsive{
+    max-height: 500px;
+}
+
+.table-responsive tbody{
+    overflow-y: auto;
+}

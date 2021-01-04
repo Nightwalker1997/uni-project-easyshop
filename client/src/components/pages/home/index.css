@@ -1,0 +1,16 @@
+img{
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.pagination{
+    justify-content: center;
+}
+
+.page-link{
+    cursor: pointer;
+}
+
+.card{
+    background: rgba(255, 255, 255, 0.8);
+}

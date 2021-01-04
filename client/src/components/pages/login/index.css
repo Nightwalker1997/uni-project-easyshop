@@ -1,0 +1,30 @@
+.signupbutton
+{
+    text-align: right;
+    /*background-color: #343a40 !important;*/
+}
+
+.signupbutton a{
+    color: inherit;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.signupbutton a:hover
+{
+    color: rgba(25, 25, 25 , 0.75);
+    /*background-color: inherit !important;*/
+}
+
+.btn-google {
+    color: white;
+    background-color: #ea4335;
+}
+
+.btn-facebook {
+    color: white;
+    background-color: #3b5998;
+}

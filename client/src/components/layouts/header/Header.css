@@ -1,0 +1,46 @@
+nav{
+  font-size: 1.3rem;
+}
+
+.navbar-brand{
+    font-size: 2rem;
+}
+
+
+.dropdown-menu
+{
+  text-align: right;
+  background-color: #343a40 !important;
+}
+
+.dropdown-menu a{
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dropdown-menu a:hover
+{
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #343a40 !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-nav input
+  {
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 35px;
+  }
+
+}
+
+
+@media (max-width: 991px) {
+  nav div div{
+    /* float: right !important; */
+    display: block !important;
+  }
+
+}

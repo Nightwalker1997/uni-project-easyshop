@@ -1,0 +1,14 @@
+html {
+    font-size: 1rem;
+}
+
+
+body{
+    margin-top: 32px;
+    padding-top: 20px;
+}
+
+
+.pointer-cursor{
+    cursor: pointer;
+}

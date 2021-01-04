@@ -1,0 +1,13 @@
+.upload {
+    margin-top: 32px;
+    margin-bottom: 10px;
+}
+.imgw{
+    max-width: 512px;
+    height: auto;
+}
+
+.col-form-label{
+    direction: ltr !important;
+    text-align: left;
+}
