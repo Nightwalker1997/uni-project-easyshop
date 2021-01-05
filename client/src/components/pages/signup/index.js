@@ -59,7 +59,8 @@ class Signup extends Component {
                     ?
                         this.props.history.push("/login")
                     :
-                        this.setState({checkMessage: res.msg}))
+                        this.setState({checkMessage: res.msg})
+                )
 
 
         }else {

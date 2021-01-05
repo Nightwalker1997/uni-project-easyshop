@@ -51,6 +51,7 @@ store.subscribe(() => {
     saveState({
         posts: store.getState().posts,
         user: store.getState().user,
+        isUser: store.getState().isUser,
         isAdmin: store.getState().isAdmin
 
     });

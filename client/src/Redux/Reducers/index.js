@@ -1,6 +1,6 @@
 import {USER_LOGIN, SET_POSTS, USER_LOGOUT} from '../types';
 
-import history from "../../Utilities/history";
+// import history from "../../Utilities/history";
 
 import {setPosts} from "../Actions/postsAction";
 import {userLogin, userLogout} from "../Actions/userAction";
@@ -8,6 +8,7 @@ import {userLogin, userLogout} from "../Actions/userAction";
 const initState = {
     posts: [],
     user: undefined,
+    isUser: false,
     isAdmin: false
 }
 
@@ -23,6 +24,7 @@ const Reducer = (state = initState, action) => {
            return {
                 ...state,
                 user: action.playLoad,
+               isUser: true,
                 isAdmin: action.playLoad.AccessLevel==='ADMIN'
             }
 
@@ -30,6 +32,7 @@ const Reducer = (state = initState, action) => {
             return {
                 ...state,
                 user: undefined,
+                isUser: false,
                 isAdmin: false
             }
 
@@ -63,7 +66,6 @@ export const loadUser = (user) =>  async (dispatch, getState) => {
         }).then(res => res.json())
             .then(res => {
                 dispatch(userLogin(res));
-                history.push('/');
             }).catch(err => {
                 console.log('err: ', err);
         })

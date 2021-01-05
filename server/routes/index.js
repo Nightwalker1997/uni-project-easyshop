@@ -8,6 +8,7 @@ const nodemailer = require('nodemailer');
 
 const Commodity = require('../models/commodity');
 const User = require('../models/user');
+const Comment = require('../models/comment');
 
 const LocalStrategy = require('passport-local').Strategy;
 
@@ -71,15 +72,6 @@ router.post('/upload', async (req, res) => {
 
 });
 
-router.get('/commodity/:_id', (req, res) =>{
-    Commodity.findOne({_id: req.params._id})
-        .then(commodity => {
-            if (commodity) {
-                return res.status(200).json(commodity);
-            }
-            return res.status(444).json({"msg": 'not found commodity.'});
-        }).catch(err => res.status(599).json(err));
-});
 
 const ensureAuthenticated = (req, res, next) => {
     if (req.isAuthenticated){
@@ -230,6 +222,39 @@ router.post('/login', [
 router.get('/logout', (req, res) => {
     res.status(205).json({msg: "no content, refresh."});
 });
+
+router.post('/comment', async (req, res) => {
+    const {commodity_id, author, text} = req.body;
+    // const date = new Date();
+    const newUser = new Comment({
+        commodity_id,
+        author,
+        text,
+        // date
+    });
+    await newUser.save(err => res.status(500).json(err))
+
+});
+
+router.get('/comment/:id', (req, res) => {
+    Comment.find({commodity_id: req.params.id})
+        .then(commodity => {
+            if (commodity) {
+                return res.status(200).json(commodity);
+            }
+            return res.status(444).json({"msg": 'not found commodity.'});
+        }).catch(err => res.status(599).json(err));
+})
+
+router.delete('/comment/delete/:id', (req, res) => {
+    Comment.deleteOne({_id: req.params.id}, err => {
+      if (err) {
+          console.error('err', err);
+          return res.status(500).json(err)
+      }
+      return res.status(200).json({msg: 'success fully deleted :) '});
+    })
+})
 
 router.all('*', (req, res) => {
     res.status(404).send('<div align="center"><h1>404</h1><br>Wrong path Click <a href="/">here</a> to go HomePage.</div>');

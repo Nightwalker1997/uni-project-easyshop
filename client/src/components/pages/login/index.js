@@ -25,6 +25,9 @@ class Login extends Component {
             password: this.state.pass1
         };
         this.props.login(user);
+        if (this.props.isUser){
+            this.props.history.push('/');
+        }
 
     }
 
@@ -106,7 +109,8 @@ class Login extends Component {
 
 const mapStateTOProps = state => {
     return{
-        user: state.user
+        user: state.user,
+        isUser : state.isUser
     }
 }
 const mapDispatchToProps = dispatch => {

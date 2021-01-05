@@ -72,6 +72,7 @@ class Header extends Component {
 const mapStateToPops = (state) => {
     return{
         user: state.user,
+        isUser: state.isUser,
         isAdmin: state.isAdmin
     }
 }
