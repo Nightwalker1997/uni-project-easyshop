@@ -1,3 +1,5 @@
 /node_modules
 /client/node_modules
 /client/public/img
+/client/public/music
+/client/public/video

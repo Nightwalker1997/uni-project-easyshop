@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component, Fragment} from 'react';
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import {connect} from 'react-redux';
 
 import { Header , Footer } from './components/layouts';
@@ -11,14 +11,39 @@ import {loadPosts} from "./Redux/Reducers";
 import './App.css';
 
 
-class App extends React.Component {
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.keyPress = this.keyPress.bind(this);
+
+
+    }
+
     componentDidMount() {
         this.props.loadPosts();
+
+        document.addEventListener("keydown", this.keyPress, false);
+        // document.addEventListener("dblclick", this.keyPress)
+        // document.addEventListener("keyup")
+        // document.addEventListener("keypress")
+        // document.addEventListener("keydown", this.escFunction, false);
+
+    }
+    componentWillUnmount() {
+        document.removeEventListener("keydown", this.keyPress, false)
+    }
+
+    keyPress(e){
+        if (e.keyCode === 27 && this.props.location.pathname !== '/'){
+            this.props.history.push('/');
+        }
     }
 
     render () {
         return (
-            <Router>
+            <Fragment>
+
+
                 <Header />
                 <br/>
                 <Switch>
@@ -34,7 +59,7 @@ class App extends React.Component {
                     <Route component={NotFound} />
                 </Switch>
                 <Footer />
-            </Router>
+            </Fragment>
         );
     }
 }
@@ -43,4 +68,4 @@ const mapDispatchToProps = dispatch => {
         loadPosts: () => dispatch(loadPosts())
     }
 }
-export default connect(null, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(withRouter(App));

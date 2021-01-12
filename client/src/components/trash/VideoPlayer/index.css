@@ -1,0 +1,4 @@
+video{
+    outline: 1px solid black;
+    object-fit: cover; /*  fit poster of video to same size   */
+}

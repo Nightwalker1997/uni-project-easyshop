@@ -6,6 +6,7 @@ import {connect} from 'react-redux';//useselector is a hooks v7.1 added
 
 import Posts from './Posts';
 import Pagination from './Pagination';
+import Carousel from "./Carousel";
 
 import './index.css';
 
@@ -34,14 +35,17 @@ class Home extends Component {
     }
 
     componentDidUpdate(prevProps, prevState){
-
+        if (prevProps.location.pathname !== this.props.location.pathname){
+            if (this.props.location.pathname === '/'){
+                this.setState({activePage: 1})
+            }
+        }
         if (prevProps.posts !== this.props.posts){
             let temp = this.props.posts;
-            console.log('temp',temp.length);
             this.setState({ listOfAll: temp });
         }
 
-        if (this.state.listOfAll !== prevState.listOfAll) {
+        if (prevState.listOfAll !== this.state.listOfAll) {
             this.setState({postsNumber: this.state.listOfAll.length});
         }
 
@@ -66,6 +70,9 @@ class Home extends Component {
     render () {
         return (
             <div className="container-fluid">
+                {this.props.location.pathname === '/'?
+                    <Carousel posts={this.state.listOfAll.slice(0, 5)}/>
+                    : null }
 
                 <Posts
                     posts={this.state.activePagePosts}
