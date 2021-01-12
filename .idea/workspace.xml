@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0bf0d1cb-6da2-4464-a1d0-5723f4da8ef8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/home/Carousel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/pages/home/carousel.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/trash/VideoPlayer/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/trash/VideoPlayer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.eslintcache" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintcache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/client/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/Utilities/convertDate.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/Utilities/convertDate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/home/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/home/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/pages/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/pages/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="0bf0d1cb-6da2-4464-a1d0-5723f4da8ef8" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,7 +71,7 @@
       <workItem from="1609848389851" duration="25666000" />
       <workItem from="1609936634966" duration="136000" />
       <workItem from="1610177207245" duration="680000" />
-      <workItem from="1610373021210" duration="30892000" />
+      <workItem from="1610373021210" duration="31541000" />
     </task>
     <servers />
   </component>
